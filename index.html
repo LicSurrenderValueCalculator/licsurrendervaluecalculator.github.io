@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <title>LIC surrender value calculator</title>
+   <meta name="description" content="Calculate the surrender value of your LIC policy easily with our LIC Surrender Value Calculator. Explore our LIC surrender value chart, use the LIC Jeevan Anand surrender value calculator, and calculate online with our easy-to-use tool." />
+    <meta name="keywords" content="LIC surrender value calculator, Calculate you lic policy surrender value online, surrender value calculator ">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://licsurrendervaluecalculator.github.io//">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+    <title>Surrender Value Calculator</title>
+   <style> #result {
+            color: green;
+            font-size: 24px;
+        }</style>
+        
+</head>
+<body>
+    <nav class="navbar navbar-light custom-navbar">
+  <a class="navbar-brand" href="#">
+    <span class="brand-text">LIC Surrender Value Calculator</span>
+  </a>
+</nav>
+    <div class="calculator">
+        <form name="ageCalculatorForm" onsubmit="calculateSurrenderValue(event)">
+            <h4>Select Policy (Optional)</h4>
+            <select id="policyType" name="policy_type">
+                <option value="select"></option>
+                <option value="LIC's Bima Jyoti">LIC's Bima Jyoti</option>
+                <option value="LIC's Bima Ratna">LIC's Bima Ratna</option>
+                <option value="LIC's Dhan Sanchay">LIC's Dhan Sanchay</option>
+                <option value="LIC's Jeevan Azad">LIC's Jeevan Azad</option>
+                <option value="LIC's Dhan Vriddhi">LIC's Dhan Vriddhi</option>
+                <option value="LIC's Single Premium Endowment Plan">LIC's Single Premium Endowment Plan</option>
+                <option value="LIC's Jeevan Lakshya">LIC's Jeevan Lakshya</option>
+                <option value="LIC's Jeevan Labh">LIC's Jeevan Labh</option>
+                <option value="LIC's Aadhar Stambh">LIC's Aadhar Stambh</option>
+                <option value="LIC's Aadhar Shila">LIC's Aadhar Shila</option>
+                <option value="LIC's New Endowment Plan (With Profits)">LIC's New Endowment Plan</option>
+                <option value="LIC's New Jeevan Anand">LIC's New Jeevan Anand</option>
+                <option value="LIC's Jeevan Rakshak">LIC's Jeevan Rakshak</option>
+                <!-- Add more options as needed -->
+            </select>
+            <h4>Premium Paid Years</h4>
+            <input id="premiumPaidYears" type="number" name="premium_paid_years">
+            <h4>Monthly Premium</h4>
+            <input id="monthlyPremium" type="number" name="monthly_premium">
+            <br/>
+            <input id="submit_button" type="submit" value="Calculate">
+        </form>
+        <div id="resultContainer" style="display: none;">
+            <h2 id="result"></h2>
+        </div>
+    </div>
+
+    <script>
+        function calculateSurrenderValue(event) {
+            event.preventDefault();
+
+            // Get user inputs
+            var premiumPaidYears = parseFloat(document.getElementById('premiumPaidYears').value) || 0;
+            var monthlyPremium = parseFloat(document.getElementById('monthlyPremium').value) || 0;
+
+            // Calculate new values
+            var annualPremium = monthlyPremium * 12;
+            var totalPremiumPaid = premiumPaidYears * annualPremium;
+            var tax = totalPremiumPaid * 0.045; // 4.5%
+
+            // Perform the subtraction
+            var resultValue = totalPremiumPaid - annualPremium - tax;
+
+            // Apply additional multipliers based on conditions
+            if (premiumPaidYears === 1) {
+                resultValue *= 0.00; // 0.00%
+            } else if (premiumPaidYears === 2) {
+                resultValue *= 0.30; // 30.00%
+            } else if (premiumPaidYears === 3) {
+                resultValue *= 0.35; // 35.00%
+            } else if (premiumPaidYears >= 4 && premiumPaidYears <= 7) {
+                resultValue *= 0.50; // 50.00%
+            } else if (premiumPaidYears === 8) {
+                resultValue *= 0.5148; // 51.48%
+            } else if (premiumPaidYears === 9) {
+                resultValue *= 0.5296; // 52.96%
+            } else if (premiumPaidYears === 10) {
+                resultValue *= 0.5444; // 54.44%
+            } else if (premiumPaidYears === 11) {
+                resultValue *= 0.5593; // 55.93%
+            } else if (premiumPaidYears === 12) {
+                resultValue *= 0.5741; // 57.41%
+            } else if (premiumPaidYears === 13) {
+                resultValue *= 0.5889; // 58.89%
+            } else if (premiumPaidYears === 14) {
+                resultValue *= 0.6037; // 60.37%
+            } else if (premiumPaidYears === 15) {
+                resultValue *= 0.6185; // 61.85%
+            } else if (premiumPaidYears === 16) {
+                resultValue *= 0.6333; // 63.33%
+            } else if (premiumPaidYears === 17) {
+                resultValue *= 0.6481; // 64.81%
+            } else if (premiumPaidYears === 18) {
+                resultValue *= 0.6630; // 66.30%
+            } else if (premiumPaidYears === 19) {
+                resultValue *= 0.6778; // 67.78%
+            } else if (premiumPaidYears === 20) {
+                resultValue *= 0.6926; // 69.26%
+            } else if (premiumPaidYears === 21) {
+                resultValue *= 0.7074; // 70.74%
+            } else if (premiumPaidYears === 22) {
+                resultValue *= 0.7222; // 72.22%
+            } else if (premiumPaidYears === 23) {
+                resultValue *= 0.7370; // 73.70%
+            } else if (premiumPaidYears === 24) {
+                resultValue *= 0.7519; // 75.19%
+            } else if (premiumPaidYears === 25) {
+                resultValue *= 0.7667; // 76.67%
+            } else if (premiumPaidYears === 26) {
+                resultValue *= 0.7815; // 78.15%
+            } else if (premiumPaidYears === 27) {
+                resultValue *= 0.7963; // 79.63%
+            } else if (premiumPaidYears === 28) {
+                resultValue *= 0.8111; // 81.11%
+            } else if (premiumPaidYears === 29) {
+                resultValue *= 0.8259; // 82.59%
+            } else if (premiumPaidYears === 30) {
+                resultValue *= 0.8407; // 84.07%
+            } else if (premiumPaidYears === 31) {
+                resultValue *= 0.8556; // 85.56%
+            } else if (premiumPaidYears === 32) {
+                resultValue *= 0.8704; // 87.04%
+            } else if (premiumPaidYears === 33) {
+                resultValue *= 0.8852; // 88.52%
+            } else if (premiumPaidYears === 34) {
+                resultValue *= 0.9000; // 90.00%
+            } else if (premiumPaidYears >= 35) {
+                resultValue *= 0.9000; // 90.00%
+            }
+
+            // Display the result only after the calculation
+            var resultElement = document.getElementById('result');
+            resultElement.innerHTML = ''; // Clear the content
+
+            // Create a span element for the background color
+            var resultBgSpan = document.createElement('span');
+            resultBgSpan.textContent = 'Approx surrender value: ';
+
+            // Apply background color to the background span
+            resultElement.appendChild(resultBgSpan);
+
+            // Create a span element for the currency symbol and result value
+            var resultValueSpan = document.createElement('span');
+            resultValueSpan.textContent = ' ₹ ' + resultValue.toFixed(2); // Fix to 2 decimal places
+
+            // Apply styles to the result value span
+            resultValueSpan.style.color = 'green'; // Set your preferred text color
+
+            resultElement.appendChild(resultValueSpan);
+            document.getElementById('resultContainer').style.display = 'block';
+        }
+    </script>
+<header>
+        <h1>LIC Surrender Value Calculator: A Comprehensive Guide</h1>
+    </header>
+
+    <section>
+        <p>When it comes to long-term savings and life insurance, LIC (Life Insurance Corporation of India) has been a trusted name for decades. However, life is unpredictable, and you may find yourself in a situation where you need to surrender your policy before its maturity. That’s when understanding the <strong>LIC surrender value</strong> becomes crucial.</p>
+        <p>In this guide, we will explain everything you need to know about LIC surrender value, how it’s calculated, its benefits, and more.</p>
+    </section>
+
+    <section>
+        <h2>What is LIC Surrender Value?</h2>
+        <p>The <strong>surrender value</strong> of a LIC policy is the amount you receive if you decide to terminate your policy before it reaches its maturity. While LIC plans are designed to be long-term investments, there are times when policyholders may want to exit early, either due to financial difficulties or other reasons. When you surrender your policy, you do not receive the full maturity benefits, but you get a portion of the premiums paid.</p>
+    </section>
+
+    <section>
+        <h2>Types of Surrender Values</h2>
+        <ul>
+            <li><strong>Guaranteed Surrender Value</strong>  
+                <p>The guaranteed surrender value is the minimum amount that you are entitled to upon surrendering your policy. It is calculated as a percentage of the total premiums paid (excluding taxes, extra premiums, and rider premiums) and usually depends on the number of years you have paid the premiums.</p>
+            </li>
+            <li><strong>Special Surrender Value</strong>  
+                <p>The special surrender value is generally higher than the guaranteed surrender value and is calculated based on the accrued bonus, duration of the policy, and the policy’s premium paying term. LIC uses this method to offer a higher value to policyholders in good-standing policies.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>How to Calculate LIC Surrender Value?</h2>
+        <p>To calculate the surrender value of your LIC policy, you need to consider the following formula:</p>
+        <blockquote>
+            <p><strong>Surrender Value = (Total Premiums Paid × Surrender Value Factor) + Bonus</strong></p>
+        </blockquote>
+        <p><strong>Total Premiums Paid</strong>: This includes all premiums you have paid up until the point of surrender, excluding any extra premiums or riders.</p>
+        <p><strong>Surrender Value Factor</strong>: This is a percentage, which increases as the policy progresses in years.</p>
+        <p><strong>Bonus</strong>: LIC policies often come with bonuses that accumulate over time. Depending on how long you’ve held the policy, the surrender value will include a portion of the accrued bonuses.</p>
+
+        <h3>Example of Surrender Value Calculation</h3>
+        <p>Suppose you have a LIC policy with an annual premium of ₹20,000 and have been paying the premiums for five years. If the surrender value factor is 30%, and the accrued bonus is ₹10,000, your surrender value would be calculated as follows:</p>
+        <ul>
+            <li>Total Premiums Paid: ₹20,000 × 5 = ₹1,00,000</li>
+            <li>Surrender Value Factor: 30%</li>
+            <li>Bonus: ₹10,000</li>
+        </ul>
+        <p>Thus, the <strong>Surrender Value</strong> = (₹1,00,000 × 30%) + ₹10,000 = ₹30,000 + ₹10,000 = <strong>₹40,000</strong>.</p>
+    </section>
+
+    <section>
+        <h2>When Can You Surrender Your LIC Policy?</h2>
+        <p>It’s important to note that surrendering your LIC policy early in its term may lead to a significant financial loss, as the surrender value in the early years is quite low. Typically, a policy becomes eligible for surrender after completing at least three years of premium payments. Surrendering before this period may result in receiving no payout.</p>
+    </section>
+
+    <section>
+        <h2>Pros and Cons of Surrendering LIC Policies</h2>
+        <p>Before surrendering a LIC policy, it’s essential to weigh the pros and cons carefully:</p>
+        <h3>Pros:</h3>
+        <ul>
+            <li><strong>Immediate Liquidity</strong>: You receive a lump sum amount, which can be helpful in a financial crisis.</li>
+            <li><strong>Relieves Future Premium Payments</strong>: You are no longer obligated to pay future premiums, which can be beneficial if the premiums are becoming a financial burden.</li>
+        </ul>
+        <h3>Cons:</h3>
+        <ul>
+            <li><strong>Loss of Insurance Coverage</strong>: By surrendering your policy, you lose the life insurance protection that comes with it.</li>
+            <li><strong>Lower Returns</strong>: The surrender value is often lower than the premiums paid, especially in the early years.</li>
+            <li><strong>No Full Bonus</strong>: You may lose out on the full bonuses that would have been available at maturity.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Things to Consider Before Surrendering Your LIC Policy</h2>
+        <ul>
+            <li><strong>Financial Needs</strong>: Ensure that surrendering your policy is the best option for your current financial situation. If you can manage without the immediate cash, continuing the policy may be more beneficial in the long run.</li>
+            <li><strong>Policy Loans</strong>: Instead of surrendering, LIC allows policyholders to take a loan against the policy. This option can provide liquidity without losing insurance coverage or long-term benefits.</li>
+            <li><strong>Paid-up Option</strong>: If you can’t continue paying the premiums but don’t want to surrender the policy, you can make the policy "paid-up." A paid-up policy means you stop paying future premiums, but the policy remains in force with reduced benefits.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>How to Check the Surrender Value of Your LIC Policy?</h2>
+        <ul>
+            <li><strong>Visit the Nearest LIC Branch</strong>: Approach your LIC branch with your policy details and inquire about the surrender value.</li>
+            <li><strong>Check Online</strong>: If you have registered on the LIC website, you can log in to your account and check the policy status and surrender value.</li>
+            <li><strong>Use a Surrender Value Calculator</strong>: Several websites, including LIC’s official site, offer surrender value calculators. Simply enter your policy details to get an approximate surrender value.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>FAQs About LIC Surrender Value</h2>
+        <h3>1. Can I surrender my LIC policy anytime?</h3>
+        <p>Yes, you can surrender your LIC policy anytime after completing at least three years of premium payments. However, surrendering early might result in a lower payout.</p>
+
+        <h3>2. Is it better to surrender or make my policy paid-up?</h3>
+        <p>Surrendering results in an immediate payout, but you lose the policy's insurance coverage and long-term benefits. Making it paid-up allows you to stop paying premiums while retaining reduced benefits.</p>
+
+        <h3>3. What happens to my policy if I stop paying premiums?</h3>
+        <p>If you stop paying premiums, your policy may lapse. However, if you've paid premiums for at least three years, you may opt to make the policy paid-up.</p>
+    </section>
+
+    <section>
+        <h2>Conclusion</h2>
+        <p>Surrendering a LIC policy should always be a last resort, as it usually results in financial losses compared to continuing the policy until maturity. If you're facing financial difficulties, explore all your options, such as loans against the policy or making it paid-up. Use the LIC surrender value calculator to make informed decisions, ensuring you balance your immediate needs with long-term financial goals.</p>
+    </section>
+
+  
+<footer class="bg-body-tertiary text-center text-lg-start">
+  <!-- Links Section -->
+  <div class="p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    <ul style="list-style-type: none; padding: 0; margin: 0;">
+      <li style="display: inline-block; margin: 0 15px;">
+        <a href="about us .html" class="text-body">About Us</a>
+      </li>
+      <li style="display: inline-block; margin: 0 15px;">
+        <a href="/contact-us" class="text-body">Contact Us</a>
+      </li>
+      <li style="display: inline-block; margin: 0 15px;">
+        <a href="/privacy-policy" class="text-body">Privacy Policy</a>
+      </li>
+    </ul>
+  </div>
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2024 Copyright:
+    <a class="text-body" href="https://licmaturitycalculator.com/">licmaturitycalculator.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+</body>
+</html>

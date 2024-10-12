@@ -1,0 +1,118 @@
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f871; /* Light Yellow Background */
+            color: #0044cc; /* Dark Blue Text */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .calculator {
+            background-color: #ffffff; /* White background for the calculator */
+            border: 2px solid #0044cc; /* Dark Blue Border */
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+            color: #0044cc; /* Dark Blue for Headings */
+        }
+
+        input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #0044cc; /* Dark Blue Border */
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #0044cc; /* Dark Blue Button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #002b80; /* Darker Blue on hover */
+        }
+
+        #result {
+            color: green;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        #resultContainer {
+            background-color: #ffeb99; /* Light Yellow for result container */
+            border: 2px solid #0044cc;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+    /* Styling for the navigation bar */
+.custom-navbar {
+    background-color: #0044cc; /* Blue background */
+    padding: 15px;
+    margin-top: 20px;  /* Adds space above the nav */
+    margin-bottom: 20px;  /* Adds space below the nav */
+    border-radius: 8px; /* Adds rounded corners */
+}
+
+/* Styling for the brand (logo and text) */
+.custom-navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #ffcc00; /* Yellow text for the brand */
+    text-decoration: none;
+}
+
+/* Styling for the brand text */
+.brand-text {
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffcc00; /* Yellow text */
+}
+
+/* Add hover effect for the brand */
+.custom-navbar .navbar-brand:hover {
+    color: #fff; /* White text on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .brand-text {
+        font-size: 18px; /* Slightly smaller text on mobile */
+    }
+
+    .custom-navbar {
+        padding: 10px; /* Less padding on mobile */
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+    /* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px; /* Added more padding for space */
+    margin-top: 20px;   /* Added margin at the top */
+}
+
+footer a {
+    color: #ffcc00; /* Yellow color for footer links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;  /* Change link color on hover */
+}
