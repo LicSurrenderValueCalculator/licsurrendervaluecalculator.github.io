@@ -318,6 +318,41 @@
   </div>
   <!-- Copyright -->
 </footer>
+  <!-- Floating Buy Me a Coffee button -->
+<a href="https://buymeacoffee.com/moneytechs/?utm_source=website&utm_medium=floating_button"
+   target="_blank" rel="noopener noreferrer"
+   class="floating-bmc" aria-label="Support me on Buy Me a Coffee">
+  <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path fill="currentColor" d="M3 6h14v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V6zM5 4a2 2 0 0 0-2 2v1a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V6a2 2 0 0 0-2-2H5zM19 7h2v2a4 4 0 0 1-4 4h-1v-2h1a2 2 0 0 0 2-2V7z"/>
+  </svg>
+  <span>Support</span>
+</a>
+
+<style>
+.floating-bmc{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:#FFDD57;
+  color:#111;
+  padding:10px 14px;
+  border-radius:999px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.18);
+  text-decoration:none;
+  font-weight:600;
+  z-index:10000;
+}
+.floating-bmc svg{ display:block; }
+.floating-bmc:hover{ transform:translateY(-3px); transition:transform .12s; }
+.floating-bmc span{ font-size:15px; }
+@media (max-width:420px){
+  .floating-bmc span{ display:none; } /* small screens show icon only */
+}
+</style>
+
 
 </body>
 </html>
